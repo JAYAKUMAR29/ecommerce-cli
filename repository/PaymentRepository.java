@@ -1,8 +1,8 @@
 package repository;
 
+import com.ecommerce.models.Payment;
 import java.util.ArrayList;
 import java.util.List;
-import model.Payment;
 
 public class PaymentRepository {
 

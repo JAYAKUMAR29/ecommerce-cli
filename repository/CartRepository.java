@@ -1,10 +1,10 @@
 package repository;
 
+import com.ecommerce.models.CartItem;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import model.CartItem;
 
 public class CartRepository {
 
@@ -22,6 +22,7 @@ public class CartRepository {
     }
 
     public boolean remove(int userId, int productId) {
+
         List<CartItem> items = carts.get(userId);
 
         if (items == null) {
@@ -29,6 +30,7 @@ public class CartRepository {
         }
 
         for (int i = 0; i < items.size(); i++) {
+
             if (items.get(i).getProduct().getProductId() == productId) {
                 items.remove(i);
                 return true;
